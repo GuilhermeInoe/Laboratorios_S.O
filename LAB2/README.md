@@ -3,5 +3,21 @@ Comandos para executar exercício 1:
 $ make ex1
 ```
 ```
-$ ./main
+$ ./bin/ex1
+```
+
+Comandos para executar exercício 2:
+```
+$ make ex2
+```
+```
+$ ./bin/ex2
+```
+
+Comandos para executar exercício 4:
+```
+$ make ex4
+```
+```
+$ ./bin/ex4
 ```
