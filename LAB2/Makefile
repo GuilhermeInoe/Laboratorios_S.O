@@ -4,6 +4,9 @@ ex1:
 ex2:
 	mkdir -p bin
 	gcc -Wall ex2.c -o ./bin/ex2 
+ex2:
+	mkdir -p bin
+	gcc -Wall ex3.c -o ./bin/ex3 
 ex4:
 	mkdir -p bin
 	gcc -Wall ex4.c -o ./bin/ex4

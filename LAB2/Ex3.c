@@ -24,15 +24,12 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Erro: tamanho e número de filhos devem ser maiores que 0.\n");
         exit(1);
     }
-
-    // Aloca o vetor
     int *vetor = malloc(tamanho * sizeof(int));
     if (vetor == NULL) {
         perror("Erro ao alocar memória");
         exit(1);
     }
 
-    // Gera valores aleatórios no vetor
     srand(time(NULL));
     printf("Vetor gerado: ");
     for (int i = 0; i < tamanho; i++) {
@@ -48,7 +45,6 @@ int main(int argc, char *argv[]) {
             perror("Erro no fork");
             exit(1);
         } else if (pid == 0) {
-            // Cálculo de intervalo de busca
             int inicio = i * (tamanho / num_filhos);
             int fim = (i == num_filhos - 1) ? tamanho : inicio + (tamanho / num_filhos);
 
@@ -58,11 +54,10 @@ int main(int argc, char *argv[]) {
                 }
             }
 
-            exit(0); // Termina o processo filho
+            exit(0);
         }
     }
 
-    // Espera todos os filhos
     for (int i = 0; i < num_filhos; i++) {
         wait(NULL);
     }
