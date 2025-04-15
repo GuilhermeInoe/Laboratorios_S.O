@@ -12,7 +12,7 @@ int main(){
     int niveis;
     pid_t pidInicial = getpid();
 
-    printf("Digite o valor N: \n", pidInicial);
+    printf("Digite o valor N: \n");
     scanf("%d", &niveis);
 
     for (int i = 1; i < niveis;)
