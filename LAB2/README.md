@@ -24,7 +24,7 @@ Comandos para executar exercício 3:
 $ make ex3
 ```
 ```
-$ ./bin/ex3
+$ ./bin/ex3 <tamanho> <num_filhos> <valor_procurado>
 ```
 
 Comandos para executar exercício 4:
