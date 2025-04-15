@@ -1,3 +1,8 @@
+Caso não esteja no diretório correto:
+```
+$ cd LAB2
+```
+
 Comandos para executar exercício 1:
 ```
 $ make ex1
