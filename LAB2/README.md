@@ -14,6 +14,14 @@ $ make ex2
 $ ./bin/ex2
 ```
 
+Comandos para executar exercício 3:
+```
+$ make ex3
+```
+```
+$ ./bin/ex3
+```
+
 Comandos para executar exercício 4:
 ```
 $ make ex4
