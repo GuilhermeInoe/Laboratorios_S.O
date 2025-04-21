@@ -1,2 +1,8 @@
 # ignora binários
 bin/
+
+# ignora os arquivos gerados pela execução da atividade 2
+matrizes/
+
+# ignora as saídas de media geradas na atividade 2
+output/
