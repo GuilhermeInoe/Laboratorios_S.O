@@ -27,4 +27,4 @@ void write_matrix_to_file(char* filename, int** matrix, int row, int col);
 void free_matrix(int** matrix, int rows, int cols);
 
 /* salva as medias em um arquivo */
-void write_average_to_file(char* filename, int* average_array, int size);
+void write_average_to_file(char* filename, double* average_array, int size);

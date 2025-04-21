@@ -8,17 +8,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <time.h>
+#include <math.h>
 
 typedef struct {
   int** matrix;       // matriz
-  int* average_rows;  // vetor de media de linhas
+  double* average_rows;  // vetor de media de linhas
   int row;            // linha a ser calculada
   int cols;           // quantidade de colunas
 } average_row_params;
 
 typedef struct {
   int** matrix;       // matriz
-  int* average_cols;  // vetor de media de colunas
+  double* average_cols;  // vetor de media de colunas
   int col;            // coluna a ser calculada
   int rows;           // quantidade de linhas
 } average_col_params;
@@ -83,6 +85,8 @@ int main(int argc, char* argv[]){
     // cria e salva a matriz em um arquivo
     matrix = create_matrix(rows, columns);
     
+    srand(time(NULL));
+    
     generate_elements(matrix, rows, columns, limit);
 
     write_matrix_to_file(file, matrix, rows, columns);
@@ -96,8 +100,8 @@ int main(int argc, char* argv[]){
   int read_col;
   matrix = read_matrix_from_file(file, &read_row, &read_col);
 
-  int* average_cols = malloc(read_col * sizeof(int));
-  int* average_rows = malloc(read_row * sizeof(int));
+  double* average_cols = malloc(read_col * sizeof(double));
+  double* average_rows = malloc(read_row * sizeof(double));
 
   pthread_t* rows_threads = malloc(read_row * sizeof(pthread_t));
   pthread_t* cols_threads = malloc(read_col * sizeof(pthread_t));
@@ -149,28 +153,30 @@ int main(int argc, char* argv[]){
 
 void* calculate_average_cols(void* data){
   average_col_params* params = data;
-  int sum = 0;
+  double product = 1;
   
   for(int i = 0; i < params->rows; i++){
-    sum += params->matrix[i][params->col];
+    product = product * params->matrix[i][params->col];
   }
 
-  int avg = sum / params->rows;
+  double divisor = 1.0 / params->rows;
+
+  double avg = pow(product, divisor);
   params->average_cols[params->col] = avg;
-  // printf("media da coluna %i: %i\n", params->col, avg);
+  printf("media da coluna %i: %f\n", params->col, avg);
   
   return NULL;
 }
 
 void* calculate_average_rows(void* data){
   average_row_params* params = data;
-  int sum = 0;
+  double sum = 0;
   
   for(int i = 0; i < params->cols; i++){
     sum += params->matrix[params->row][i];
   }
 
-  int avg = sum / params->cols;
+  double avg = sum / params->cols;
   params->average_rows[params->row] = avg;
   // printf("media da linha %i: %i\n", params->row, avg);
   

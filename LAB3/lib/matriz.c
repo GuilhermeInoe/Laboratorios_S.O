@@ -91,7 +91,7 @@ void free_matrix(int** matrix, int rows, int cols){
 }
 
 /** salva as medias em um arquivo */
-void write_average_to_file(char* filename, int* average_array, int size){
+void write_average_to_file(char* filename, double* average_array, int size){
    FILE *fd = fopen(filename, "w");
    if (fd == NULL) {
       perror("Erro ao abrir o arquivo para escrita");
@@ -99,7 +99,7 @@ void write_average_to_file(char* filename, int* average_array, int size){
    }
 
    for (int i = 0; i < size; i++) {
-      fprintf(fd, "%d ", average_array[i]);
+      fprintf(fd, "%.2f ", average_array[i]);
    }
    fprintf(fd, "\n");
 
