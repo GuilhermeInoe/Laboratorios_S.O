@@ -64,9 +64,9 @@ $ ./bin/ex2 -f <caminho para o arquivo> -rf <caminho para o arquivo de médias d
 `-f <caminho do arquivo>`
 
 ##### Arquivo de saída para a média de linhas
-###### Padrão: output/media_linhas_<linhas>_<colunas>.out 
+###### Padrão: output/media_linhas_[`linhas`]_[`colunas`].out 
 `-rf <caminho>`
 
 ##### Arquivo de saída para a média de linhas
-###### Padrão: output/media_colunas_<linhas>_<colunas>.out 
+###### Padrão: output/media_colunas_[`linhas`]_[`colunas`].out 
 `-cf <caminho>`
