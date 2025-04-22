@@ -34,39 +34,41 @@ $ ./bin/ex1 -v <valor procurado> -t <número de threads> -a <tamanho do vetor> -
 
 ### Comandos para executar exercício 2:
 ```
-$ make ex2
+$ make Exercicio_02
 ```
 ###### Para geração do arquivo
 ```
-$ ./bin/ex2 -r <número de linhas> -c <número de colunas> -l <limite dos numeros gerados>
+$ ./bin/ex2 -t <número de threads> -l <número de linhas> -c <número de colunas> -e <nome do arqivo de entrada com a matriz> -s <nome do arqivo de saída com a matrizz>
 ```
-###### Para usar em um arquivo
-```
-$ ./bin/ex2 -f <caminho para o arquivo> -rf <caminho para o arquivo de médias de linhas> -rf <caminho para o arquivo de médias de colunas>
-```
+#### Funcionamento:
+###
 
 #### Flags:
 
+##### Número de threads
+###### Padrão: 4
+`-t <número de threads>`
+
 ##### Número de linhas
-###### Padrão: 6
-`-r <número de linhas>` 
+###### Padrão: 10
+`-l <número de linhas>` 
 
 ##### Número de colunas
-###### Padrão: 8
+###### Padrão: 10
 `-c <número de colunas>` 
 
-##### Número máximo gerado aleatóriamente
+##### Nome do arqivo de entrada com a matriz (Opcional):
 ###### Padrão: 20
-`-l <número limite>`
+`-e <nome do arquivo>`
+##### Descrição:
+### Caso o usuário prefira usar uma matriz pronta, deverá informar o nome do arquivo com a matriz com essa flag.
+### O número de linhas e colunas da matriz em arquivo externo também devem ser informados 
 
-##### Arquivo de entrada
+##### Nome do arqivo de saída com a matriz (Opcional)
 ###### Padrão: gerado aleatóriamente
-`-f <caminho do arquivo>`
+`-s <nome do arquivo>`
+##### Descrição:
+### Caso o usuário queira um arquivo externo com a matriz gerada pelo programa deve informar o nome usando essa flag.
 
-##### Arquivo de saída para a média de linhas
-###### Padrão: output/media_linhas_[`linhas`]_[`colunas`].out 
-`-rf <caminho>`
 
-##### Arquivo de saída para a média de linhas
-###### Padrão: output/media_colunas_[`linhas`]_[`colunas`].out 
-`-cf <caminho>`
+
