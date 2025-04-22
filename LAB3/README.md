@@ -53,7 +53,7 @@ $ ./bin/ex2 -f <caminho para o arquivo> -rf <caminho para o arquivo de médias d
 
 ##### Número de colunas
 ###### Padrão: 8
-`-r <número de linhas>` 
+`-c <número de colunas>` 
 
 ##### Número máximo gerado aleatóriamente
 ###### Padrão: 20
