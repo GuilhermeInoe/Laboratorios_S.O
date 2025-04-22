@@ -3,4 +3,4 @@ ex1:
 	gcc -Wall ex1.c -o ./bin/ex1
 
 ex2:
-	gcc -o programa Exercicio_02.c ./matriz/matriz.c -lm
+	gcc -o Exercicio2.run Exercicio_02.c ./matriz/matriz.c -lm
