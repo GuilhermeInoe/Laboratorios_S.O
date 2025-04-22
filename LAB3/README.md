@@ -41,7 +41,7 @@ $ make Exercicio_02
 $ ./bin/ex2 -t <número de threads> -l <número de linhas> -c <número de colunas> -e <nome do arqivo de entrada com a matriz> -s <nome do arqivo de saída com a matrizz>
 ```
 ### Funcionamento:
-#### O usuário opta por gerar uma matriz com valores aleatórios gerada pelo programa
+#### O usuário opta por criar uma matriz com valores aleatórios gerada pelo programa
 #### ou usar uma matriz pronta em um arquivo externo
 
 #### Flags:
@@ -63,7 +63,8 @@ $ ./bin/ex2 -t <número de threads> -l <número de linhas> -c <número de coluna
 `-e <nome do arquivo>`
 #### Descrição:
 ##### Caso o usuário prefira usar uma matriz pronta, deverá informar o nome do arquivo com a matriz com essa flag.
-##### O número de linhas e colunas da matriz em arquivo externo também devem ser informados 
+##### O número de linhas e colunas da matriz em arquivo externo também devem ser informados! 
+##### Se a flag não for usada o programa irá criar uma matriz aleatória com os valores de linhas e coluna informados.
 
 ##### Nome do arqivo de saída com a matriz (Opcional)
 ###### Padrão: gmensagem informando que nada foi enviado
