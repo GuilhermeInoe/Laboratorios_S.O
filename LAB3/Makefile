@@ -3,7 +3,4 @@ ex1:
 	gcc -Wall ex1.c -o ./bin/ex1
 
 ex2:
-	mkdir -p bin
-	mkdir -p matrizes
-	mkdir -p output
-	gcc -Wall ex2.c lib/matriz.c -o ./bin/ex2 -lm
+	gcc -o programa Exercicio_02.c ./matriz/matriz.c -lm
