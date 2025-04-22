@@ -38,7 +38,7 @@ $ make Exercicio_02
 ```
 ###### Para geração do arquivo
 ```
-$ ./bin/ex2 -t <número de threads> -l <número de linhas> -c <número de colunas> -e <nome do arqivo de entrada com a matriz> -s <nome do arqivo de saída com a matrizz>
+$ ./Exercicio2.run -t <número de threads> -l <número de linhas> -c <número de colunas> -e <nome do arqivo de entrada com a matriz> -s <nome do arqivo de saída com a matrizz>
 ```
 ### Funcionamento:
 #### O usuário opta por criar uma matriz com valores aleatórios gerada pelo programa
