@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
   char rows_file[100];
   char cols_file[100];
   strcpy(rows_file, "./media_linhas.out");
-  strcpy(rows_file, "./media_colunas.out");
+  strcpy(cols_file, "./media_colunas.out");
   int** matrix;
   
   // valores definidos pelo usuário

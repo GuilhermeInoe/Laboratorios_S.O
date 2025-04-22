@@ -33,44 +33,72 @@ $ ./bin/ex1 -v <valor procurado> -t <número de threads> -a <tamanho do vetor> -
 
 
 ### Comandos para executar exercício 2:
+
 ```
-$ make Exercicio_02
+$ make ex2
 ```
+
 ###### Para geração do arquivo
+
 ```
-$ ./Exercicio2.run -t <número de threads> -l <número de linhas> -c <número de colunas> -e <nome do arqivo de entrada com a matriz> -s <nome do arqivo de saída com a matrizz>
+$ ./bin/ex2 -r <número de linhas> -c <número de colunas> -l <limite dos numeros gerados>
 ```
-### Funcionamento:
-#### O usuário opta por criar uma matriz com valores aleatórios gerada pelo programa
-#### ou usar uma matriz pronta em um arquivo externo
+
+###### Para usar em um arquivo
+
+```
+$ ./bin/ex2 -f <caminho para o arquivo> -rf <caminho para o arquivo de médias de linhas> -rf <caminho para o arquivo de médias de colunas>
+```
+
+
 
 #### Flags:
 
-##### Número de threads
-###### Padrão: 4
-`-t <número de threads>`
+
 
 ##### Número de linhas
-###### Padrão: 10
-`-l <número de linhas>` 
+
+###### Padrão: 6
+
+`-r <número de linhas>` 
+
+
 
 ##### Número de colunas
-###### Padrão: 10
+
+###### Padrão: 8
+
+
 `-c <número de colunas>` 
 
-##### Nome do arqivo de entrada com a matriz (Opcional):
-###### Padrão: mensagem informando que nada foi enviado
-`-e <nome do arquivo>`
-#### Descrição:
-##### Caso o usuário prefira usar uma matriz pronta, deverá informar o nome do arquivo com a matriz com essa flag.
-##### O número de linhas e colunas da matriz em arquivo externo também devem ser informados! 
-##### Se a flag não for usada o programa irá criar uma matriz aleatória com os valores de linhas e coluna informados.
 
-##### Nome do arqivo de saída com a matriz (Opcional)
-###### Padrão: gmensagem informando que nada foi enviado
-`-s <nome do arquivo>`
-#### Descrição:
-##### Caso o usuário queira um arquivo externo com a matriz gerada pelo programa deve informar o nome usando essa flag.
+
+##### Número máximo gerado aleatóriamente
+
+###### Padrão: 20
+
+`-l <número limite>`
 
 
 
+##### Arquivo de entrada
+
+###### Padrão: gerado aleatóriamente
+
+`-f <caminho do arquivo>`
+
+
+
+##### Arquivo de saída para a média de linhas
+
+###### Padrão: output/media_linhas_[`linhas`]_[`colunas`].out 
+
+`-rf <caminho>`
+
+
+
+##### Arquivo de saída para a média de linhas
+
+###### Padrão: output/media_colunas_[`linhas`]_[`colunas`].out 
+
+`-cf <caminho>`
