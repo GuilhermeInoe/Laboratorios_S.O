@@ -7,7 +7,7 @@ $ ./ex1
 ```
 
 
-Comandos para executar exercício 1:
+Comandos para executar exercício 2:
 ```
 $ 
 ```
